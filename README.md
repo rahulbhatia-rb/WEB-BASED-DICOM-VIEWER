@@ -21,7 +21,7 @@ Implementation of a web-based (JavaScript and HTML5 only) DICOM viewer
  
  7. 1×1, 1×2, 2×2 and 4×4 grid–view
  
- 8.Show patient and study information in the corners
+ 8. Show patient and study information in the corners
  
  9.Display all DICOM attributes of the image
 
