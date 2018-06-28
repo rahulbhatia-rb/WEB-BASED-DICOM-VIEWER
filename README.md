@@ -23,7 +23,7 @@ Implementation of a web-based (JavaScript and HTML5 only) DICOM viewer
  
  8. Show patient and study information in the corners
  
- 9.Display all DICOM attributes of the image
+ 9. Display all DICOM attributes of the image
 
 I made use of an External JavaScript Library called CORNERSTONE
 to achieve the above results.
