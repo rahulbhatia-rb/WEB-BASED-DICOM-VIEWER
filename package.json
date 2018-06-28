@@ -1,0 +1,102 @@
+{
+  "_from": "cornerstone-math",
+  "_id": "cornerstone-math@0.1.6",
+  "_inBundle": false,
+  "_integrity": "sha1-k7OtcvroFTg8zlGAryODZVAgDDo=",
+  "_location": "/cornerstone-math",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cornerstone-math",
+    "name": "cornerstone-math",
+    "escapedName": "cornerstone-math",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cornerstone-math/-/cornerstone-math-0.1.6.tgz",
+  "_shasum": "93b3ad72fae815383cce5180af23836550200c3a",
+  "_spec": "cornerstone-math",
+  "_where": "C:\\Users\\rahulbhatia1998",
+  "author": {
+    "name": "Chris Hafey"
+  },
+  "bugs": {
+    "url": "https://github.com/chafey/cornerstoneMath/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Math and computation geometry functionality for cornerstone",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^6.4.1",
+    "babel-preset-env": "^1.3.2",
+    "chai": "^3.5.0",
+    "coveralls": "^2.13.1",
+    "docdash": "^0.4.0",
+    "eslint": "^3.19.0",
+    "eslint-loader": "^1.7.1",
+    "istanbul": "^0.4.5",
+    "istanbul-instrumenter-loader": "^2.0.0",
+    "jsdoc": "^3.4.3",
+    "karma": "^1.6.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-coverage": "^1.1.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-webpack": "^2.0.3",
+    "mocha": "^3.2.0",
+    "opn-cli": "^3.1.0",
+    "shx": "^0.2.2",
+    "webpack": "^2.4.1"
+  },
+  "homepage": "https://github.com/chafey/cornerstoneMath",
+  "keywords": [
+    "DICOM",
+    "medical",
+    "imaging",
+    "cornerstone",
+    "math",
+    "computation geometry"
+  ],
+  "license": "MIT",
+  "main": "./dist/cornerstoneMath.min.js",
+  "module": "src/index.js",
+  "name": "cornerstone-math",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chafey/cornerstoneMath.git"
+  },
+  "scripts": {
+    "build": "npm run test && npm run version && npm run webpack && npm run doc:generate",
+    "clean": "npm run clean:dist && npm run clean:coverage",
+    "clean:coverage": "shx rm -rf coverage",
+    "clean:dist": "shx rm -rf dist",
+    "clean:docs": "shx rm -rf documentation",
+    "doc": "npm run doc:generate && opn documentation/index.html",
+    "doc:generate": "npm run clean:docs && jsdoc -c .jsdocrc",
+    "eslint": "eslint -c .eslintrc.js src",
+    "eslint-fix": "eslint -c .eslintrc.js --fix src",
+    "eslint-quiet": "eslint -c .eslintrc.js --quiet src",
+    "start": "npm run webpack",
+    "test": "npm run test:phantom",
+    "test:all": "npm run test:phantom && npm run test:chrome && npm run test:firefox",
+    "test:chrome": "karma start config/karma/karma-chrome.js",
+    "test:firefox": "karma start config/karma/karma-firefox.js",
+    "test:phantom": "karma start config/karma/karma-phantom.js",
+    "test:watch": "karma start config/karma/karma-watch.js",
+    "version": "node -p -e \"'export default \\'' + require('./package.json').version + '\\';'\" > src/version.js",
+    "watch": "npm run webpack:watch",
+    "webpack": "npm run clean:dist && npm run webpack:prod && npm run webpack:dev",
+    "webpack:dev": "webpack --progress --config ./config/webpack/webpack-dev",
+    "webpack:prod": "webpack --progress --config ./config/webpack/webpack-prod",
+    "webpack:watch": "webpack --progress --debug --watch  --config ./config/webpack"
+  },
+  "version": "0.1.6"
+}
