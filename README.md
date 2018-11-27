@@ -25,8 +25,7 @@ Implementation of a web-based (JavaScript and HTML5 only) DICOM viewer
  
  9. Display all DICOM attributes of the image
 
-I made use of an External JavaScript Library called CORNERSTONE
-to achieve the above results.
+Implementation : https://rawgit.com/cornerstonejs/cornerstoneWADOImageLoader/master/examples/dicomfile/index.html 
 
 
  
